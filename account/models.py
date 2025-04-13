@@ -1,4 +1,3 @@
-from typing import Iterable
 from django.db import models
 
 
@@ -13,7 +12,7 @@ class Rates(models.Model):
         verbose_name_plural = ("Тарифы")
 
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.rate_name
 
 
@@ -25,7 +24,7 @@ class Place(models.Model):
         verbose_name_plural = ("Районы")
 
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.name
 
 
@@ -62,7 +61,7 @@ class Account(models.Model):
             self.rate_count = self.rate.rate_count
         return super().save(*args, **kwargs)
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.name
 
 
@@ -79,7 +78,7 @@ class WorkerAccount(models.Model):
         verbose_name = ("Курьер")
         verbose_name_plural = ("Курьеры")
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.first_name
 
 
